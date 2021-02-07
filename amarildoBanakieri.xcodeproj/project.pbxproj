@@ -3,23 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C3315C1F34071417A3B6A99 /* Pods_amarildoBanakieri.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306826D1B03B1BE4A35C88EA /* Pods_amarildoBanakieri.framework */; };
 		CE452F7A25A4C97700124BD2 /* amarildoBanakieriApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE452F7925A4C97700124BD2 /* amarildoBanakieriApp.swift */; };
-		CE452F7C25A4C97700124BD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE452F7B25A4C97700124BD2 /* ContentView.swift */; };
 		CE452F7E25A4C97A00124BD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE452F7D25A4C97A00124BD2 /* Assets.xcassets */; };
 		CE452F8125A4C97A00124BD2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE452F8025A4C97A00124BD2 /* Preview Assets.xcassets */; };
+		CE452FB525A4DAEA00124BD2 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE452FB425A4DAEA00124BD2 /* AppView.swift */; };
+		CE452FB825A4DBB900124BD2 /* shopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE452FB725A4DBB900124BD2 /* shopView.swift */; };
+		CE452FBC25A4DBE400124BD2 /* discoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE452FBB25A4DBE400124BD2 /* discoverView.swift */; };
+		CE452FC025A4DBEF00124BD2 /* createView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE452FBF25A4DBEF00124BD2 /* createView.swift */; };
+		CE452FC325A4DC1600124BD2 /* searchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE452FC225A4DC1600124BD2 /* searchView.swift */; };
+		CE55821625ACC5C2008F8D9C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55821525ACC5C2008F8D9C /* NetworkManager.swift */; };
+		CE55821A25ACC827008F8D9C /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55821925ACC827008F8D9C /* PostData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		306826D1B03B1BE4A35C88EA /* Pods_amarildoBanakieri.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amarildoBanakieri.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32224AF9DCC480CE8DFCD39A /* Pods-amarildoBanakieri.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amarildoBanakieri.release.xcconfig"; path = "Target Support Files/Pods-amarildoBanakieri/Pods-amarildoBanakieri.release.xcconfig"; sourceTree = "<group>"; };
+		639A8CF6F157845FD02CAACC /* Pods-amarildoBanakieri.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amarildoBanakieri.debug.xcconfig"; path = "Target Support Files/Pods-amarildoBanakieri/Pods-amarildoBanakieri.debug.xcconfig"; sourceTree = "<group>"; };
 		CE452F7625A4C97700124BD2 /* amarildoBanakieri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = amarildoBanakieri.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE452F7925A4C97700124BD2 /* amarildoBanakieriApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = amarildoBanakieriApp.swift; sourceTree = "<group>"; };
-		CE452F7B25A4C97700124BD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE452F7D25A4C97A00124BD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE452F8025A4C97A00124BD2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE452F8225A4C97A00124BD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE452FB425A4DAEA00124BD2 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		CE452FB725A4DBB900124BD2 /* shopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shopView.swift; sourceTree = "<group>"; };
+		CE452FBB25A4DBE400124BD2 /* discoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = discoverView.swift; sourceTree = "<group>"; };
+		CE452FBF25A4DBEF00124BD2 /* createView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createView.swift; sourceTree = "<group>"; };
+		CE452FC225A4DC1600124BD2 /* searchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchView.swift; sourceTree = "<group>"; };
+		CE55821525ACC5C2008F8D9C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CE55821925ACC827008F8D9C /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C3315C1F34071417A3B6A99 /* Pods_amarildoBanakieri.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		596B412822E9817E52A9DE42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				306826D1B03B1BE4A35C88EA /* Pods_amarildoBanakieri.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AFC04016234FD9630D7AF191 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				639A8CF6F157845FD02CAACC /* Pods-amarildoBanakieri.debug.xcconfig */,
+				32224AF9DCC480CE8DFCD39A /* Pods-amarildoBanakieri.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CE452F6D25A4C97700124BD2 = {
 			isa = PBXGroup;
 			children = (
 				CE452F7825A4C97700124BD2 /* amarildoBanakieri */,
 				CE452F7725A4C97700124BD2 /* Products */,
+				AFC04016234FD9630D7AF191 /* Pods */,
+				596B412822E9817E52A9DE42 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,8 +88,10 @@
 		CE452F7825A4C97700124BD2 /* amarildoBanakieri */ = {
 			isa = PBXGroup;
 			children = (
+				CE452FBA25A4DBC100124BD2 /* Tabs */,
 				CE452F7925A4C97700124BD2 /* amarildoBanakieriApp.swift */,
-				CE452F7B25A4C97700124BD2 /* ContentView.swift */,
+				CE55821825ACC7FE008F8D9C /* Models */,
+				CE452FB425A4DAEA00124BD2 /* AppView.swift */,
 				CE452F7D25A4C97A00124BD2 /* Assets.xcassets */,
 				CE452F8225A4C97A00124BD2 /* Info.plist */,
 				CE452F7F25A4C97A00124BD2 /* Preview Content */,
@@ -69,6 +107,26 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		CE452FBA25A4DBC100124BD2 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				CE452FBB25A4DBE400124BD2 /* discoverView.swift */,
+				CE452FB725A4DBB900124BD2 /* shopView.swift */,
+				CE452FBF25A4DBEF00124BD2 /* createView.swift */,
+				CE452FC225A4DC1600124BD2 /* searchView.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		CE55821825ACC7FE008F8D9C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE55821525ACC5C2008F8D9C /* NetworkManager.swift */,
+				CE55821925ACC827008F8D9C /* PostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -76,15 +134,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE452F8525A4C97A00124BD2 /* Build configuration list for PBXNativeTarget "amarildoBanakieri" */;
 			buildPhases = (
+				E5C280EDFA87FDCF2243006E /* [CP] Check Pods Manifest.lock */,
 				CE452F7225A4C97700124BD2 /* Sources */,
 				CE452F7325A4C97700124BD2 /* Frameworks */,
 				CE452F7425A4C97700124BD2 /* Resources */,
+				DFD408A090F11792E0DA48A3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = amarildoBanakieri;
+			packageProductDependencies = (
+			);
 			productName = amarildoBanakieri;
 			productReference = CE452F7625A4C97700124BD2 /* amarildoBanakieri.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +174,9 @@
 				Base,
 			);
 			mainGroup = CE452F6D25A4C97700124BD2;
+			packageReferences = (
+				CE55821125ACBD48008F8D9C /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = CE452F7725A4C97700124BD2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -133,13 +198,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DFD408A090F11792E0DA48A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-amarildoBanakieri/Pods-amarildoBanakieri-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-amarildoBanakieri/Pods-amarildoBanakieri-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-amarildoBanakieri/Pods-amarildoBanakieri-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5C280EDFA87FDCF2243006E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-amarildoBanakieri-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE452F7225A4C97700124BD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE452F7C25A4C97700124BD2 /* ContentView.swift in Sources */,
+				CE452FC325A4DC1600124BD2 /* searchView.swift in Sources */,
+				CE55821A25ACC827008F8D9C /* PostData.swift in Sources */,
 				CE452F7A25A4C97700124BD2 /* amarildoBanakieriApp.swift in Sources */,
+				CE55821625ACC5C2008F8D9C /* NetworkManager.swift in Sources */,
+				CE452FC025A4DBEF00124BD2 /* createView.swift in Sources */,
+				CE452FBC25A4DBE400124BD2 /* discoverView.swift in Sources */,
+				CE452FB825A4DBB900124BD2 /* shopView.swift in Sources */,
+				CE452FB525A4DAEA00124BD2 /* AppView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +377,7 @@
 		};
 		CE452F8625A4C97A00124BD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 639A8CF6F157845FD02CAACC /* Pods-amarildoBanakieri.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -285,6 +399,7 @@
 		};
 		CE452F8725A4C97A00124BD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32224AF9DCC480CE8DFCD39A /* Pods-amarildoBanakieri.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -326,6 +441,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE55821125ACBD48008F8D9C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = CE452F6E25A4C97700124BD2 /* Project object */;
 }

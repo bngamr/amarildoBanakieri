@@ -7,11 +7,14 @@
 
 import SwiftUI
 
+
 @main
 struct amarildoBanakieriApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+        
+            AppView()
         }
     }
 }
+
