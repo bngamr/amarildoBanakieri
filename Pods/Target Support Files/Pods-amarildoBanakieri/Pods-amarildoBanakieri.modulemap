@@ -1,6 +1,0 @@
-framework module Pods_amarildoBanakieri {
-  umbrella header "Pods-amarildoBanakieri-umbrella.h"
-
-  export *
-  module * { export * }
-}
