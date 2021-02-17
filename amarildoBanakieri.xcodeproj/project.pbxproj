@@ -18,6 +18,7 @@
 		CE452FC325A4DC1600124BD2 /* searchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE452FC225A4DC1600124BD2 /* searchView.swift */; };
 		CE55821625ACC5C2008F8D9C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55821525ACC5C2008F8D9C /* NetworkManager.swift */; };
 		CE55821A25ACC827008F8D9C /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55821925ACC827008F8D9C /* PostData.swift */; };
+		CEB9641B25D707D1006D892D /* iPages in Frameworks */ = {isa = PBXBuildFile; productRef = CEB9641A25D707D1006D892D /* iPages */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				927BA01E25D53A4300787649 /* Kingfisher in Frameworks */,
+				CEB9641B25D707D1006D892D /* iPages in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +125,7 @@
 			name = amarildoBanakieri;
 			packageProductDependencies = (
 				927BA01D25D53A4300787649 /* Kingfisher */,
+				CEB9641A25D707D1006D892D /* iPages */,
 			);
 			productName = amarildoBanakieri;
 			productReference = CE452F7625A4C97700124BD2 /* amarildoBanakieri.app */;
@@ -154,6 +157,7 @@
 			packageReferences = (
 				CE55821125ACBD48008F8D9C /* XCRemoteSwiftPackageReference "Alamofire" */,
 				927BA01C25D53A4300787649 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				CEB9641925D707D1006D892D /* XCRemoteSwiftPackageReference "iPages" */,
 			);
 			productRefGroup = CE452F7725A4C97700124BD2 /* Products */;
 			projectDirPath = "";
@@ -393,6 +397,14 @@
 				minimumVersion = 5.4.1;
 			};
 		};
+		CEB9641925D707D1006D892D /* XCRemoteSwiftPackageReference "iPages" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/benjaminsage/iPages.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.12;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -400,6 +412,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 927BA01C25D53A4300787649 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		CEB9641A25D707D1006D892D /* iPages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEB9641925D707D1006D892D /* XCRemoteSwiftPackageReference "iPages" */;
+			productName = iPages;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

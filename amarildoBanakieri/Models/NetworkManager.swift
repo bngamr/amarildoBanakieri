@@ -10,7 +10,7 @@ import Kingfisher
 
 class NetworkManager: ObservableObject {
     
-    @Published var posts = [Post]()
+    @Published var posts = [Drink]()
     
     func fetchData() {
         if let url = URL(string: "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita") {

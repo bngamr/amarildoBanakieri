@@ -14,6 +14,7 @@ struct AppView: View {
     
     var body: some View {
         
+     let networkmanager = NetworkManager()
         TabView {
            
             discoverView()
@@ -44,7 +45,8 @@ struct AppView: View {
                
             
             
-        }.accentColor(.orange)
+        }
+        .accentColor(.orange)
       
     }
     
