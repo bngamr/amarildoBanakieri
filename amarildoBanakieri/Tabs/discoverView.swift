@@ -120,10 +120,11 @@ struct DetailView: View {
 
 
 struct Post: View {
-
+  
     var post: Drink
     var body: some View {
 
+       
         ZStack {
             KFImage(URL(string: post.strDrinkThumb))
                 .resizable()
@@ -141,6 +142,11 @@ struct Post: View {
                 .foregroundColor(.white)
                 .font(.custom("Rockwell", size: 40))
                 .multilineTextAlignment(.center)
+            
+//            Circle()
+//                .fill(Color.gray)
+//                .frame(width:self.backgroundOffset)
+            
 
         }
         .frame(height: 300)
@@ -152,25 +158,104 @@ struct Post: View {
 
 
 struct ProductView: View {
-
+    @State var count: CGFloat = 0
+    @State var backgroundOffset: CGFloat = 0
     @ObservedObject var networkManager = NetworkManager()
     var body: some View {
 
-        ScrollView{
+        GeometryReader { g in
         
-        
-        iPages{
+            HStack(spacing: 0){
            
-            ForEach(networkManager.posts) {post in
+            ForEach(networkManager.posts) { post in
+                ZStack {
                 Post(post: post)
-            }
+                    
+             
+                    
+                HStack {
+                Circle()
+                    .fill(Color.gray)
+                    .frame(width:self.backgroundOffset == 0 ? 20:10, height: self.backgroundOffset == 0 ? 20:10)
+                    .overlay(
+                        Circle()
+                            .stroke(Color.white, lineWidth: 2))
+                    
+                    Circle()
+                        .fill(Color.gray)
+                        .frame(width:self.backgroundOffset == 1 ? 20:10, height: self.backgroundOffset == 1 ? 20:10)
+                        .overlay(
+                            Circle()
+                                .stroke(Color.white, lineWidth: 2))
+                        
+                    Circle()
+                        .fill(Color.gray)
+                        .frame(width:self.backgroundOffset == 2 ? 20:10, height: self.backgroundOffset == 2 ? 20:10)
+                        .overlay(
+                            Circle()
+                                .stroke(Color.white, lineWidth: 2))
+                        
+                    Circle()
+                        .fill(Color.gray)
+                        .frame(width:self.backgroundOffset == 3 ? 20:10, height: self.backgroundOffset == 3 ? 20:10)
+                        .overlay(
+                            Circle()
+                                .stroke(Color.white, lineWidth: 2))
+                        
+                    Circle()
+                        .fill(Color.gray)
+                        .frame(width:self.backgroundOffset == 4 ? 20:10, height: self.backgroundOffset == 4 ? 20:10)
+                        .overlay(
+                            Circle()
+                                .stroke(Color.white, lineWidth: 2))
+                        
+                    Circle()
+                        .fill(Color.gray)
+                        .frame(width:self.backgroundOffset == 5 ? 20:10, height: self.backgroundOffset == 5 ? 20:10)
+                        .overlay(
+                            Circle()
+                                .stroke(Color.white, lineWidth: 2))
+                        
+                        
+                    
+                }.frame(width: g.size.width / 2, height: g.size.height / 2.2,
+                        alignment: .bottom)
+                
+                
+                }
+                
+            }.offset(x: -(self.backgroundOffset * UIScreen.main.bounds.width))
+            .animation(.default)
+            .frame(width: UIScreen.main.bounds.width, height: g.size.height / 2 )
+
                 
      
         }
-        .frame(width: UIScreen.main.bounds.width, height: 300)
-
-        }.onAppear(perform: networkManager.fetchData)
-        }
+            .gesture(
+                DragGesture()
+                    .onEnded({ value in
+                        
+                        if value.translation.width > 10 {
+                            
+                            if self.backgroundOffset > 0{
+                            
+                            self.backgroundOffset -= 1
+                            }
+                            
+                        }else if value.translation.width < 10{
+                            if self.backgroundOffset < 5{
+                            self.backgroundOffset += 1
+                            }
+                        }
+                        
+                        
+                    })
+            )
+            
+        }.edgesIgnoringSafeArea(.all)
+        .onAppear(perform: networkManager.fetchData)
+        
+    }
     }
 
 
