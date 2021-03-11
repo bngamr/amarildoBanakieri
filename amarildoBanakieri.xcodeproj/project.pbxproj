@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F589C7D25EBB85500E4A4B0 /* testimiTestit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F589C7C25EBB85500E4A4B0 /* testimiTestit.swift */; };
+		2FFD931F25F2C913001619E2 /* extraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFD931E25F2C913001619E2 /* extraView.swift */; };
 		927BA01E25D53A4300787649 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 927BA01D25D53A4300787649 /* Kingfisher */; };
 		CE452F7A25A4C97700124BD2 /* amarildoBanakieriApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE452F7925A4C97700124BD2 /* amarildoBanakieriApp.swift */; };
 		CE452F7E25A4C97A00124BD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE452F7D25A4C97A00124BD2 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F589C7C25EBB85500E4A4B0 /* testimiTestit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testimiTestit.swift; sourceTree = "<group>"; };
+		2FFD931E25F2C913001619E2 /* extraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extraView.swift; sourceTree = "<group>"; };
 		CE452F7625A4C97700124BD2 /* amarildoBanakieri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = amarildoBanakieri.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE452F7925A4C97700124BD2 /* amarildoBanakieriApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = amarildoBanakieriApp.swift; sourceTree = "<group>"; };
 		CE452F7D25A4C97A00124BD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 				CE452FB725A4DBB900124BD2 /* shopView.swift */,
 				CE452FBF25A4DBEF00124BD2 /* createView.swift */,
 				CE452FC225A4DC1600124BD2 /* searchView.swift */,
+				2FFD931E25F2C913001619E2 /* extraView.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 			children = (
 				CE55821525ACC5C2008F8D9C /* NetworkManager.swift */,
 				CE55821925ACC827008F8D9C /* PostData.swift */,
+				2F589C7C25EBB85500E4A4B0 /* testimiTestit.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,8 +196,10 @@
 				CE452F7A25A4C97700124BD2 /* amarildoBanakieriApp.swift in Sources */,
 				CE55821625ACC5C2008F8D9C /* NetworkManager.swift in Sources */,
 				CE452FC025A4DBEF00124BD2 /* createView.swift in Sources */,
+				2FFD931F25F2C913001619E2 /* extraView.swift in Sources */,
 				CE452FBC25A4DBE400124BD2 /* discoverView.swift in Sources */,
 				CE452FB825A4DBB900124BD2 /* shopView.swift in Sources */,
+				2F589C7D25EBB85500E4A4B0 /* testimiTestit.swift in Sources */,
 				CE452FB525A4DAEA00124BD2 /* AppView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
