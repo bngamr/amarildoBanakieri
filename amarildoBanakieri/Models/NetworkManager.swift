@@ -13,7 +13,6 @@ class NetworkManager: ObservableObject {
     @Published var postsPosht = [DrinkPosht]()
     @Published var userSearch = [UserSearch]()
 
-    
     func fetchData() {
         let urlString: String = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
         if let url = URL(string: urlString) {
@@ -61,9 +60,6 @@ class NetworkManager: ObservableObject {
             task.resume()
         }
     }
-    
-    
-    
 
     func searchData(userText: String) {
             
@@ -90,6 +86,5 @@ class NetworkManager: ObservableObject {
         task.resume()
     }
 }
-    
 }
 

@@ -14,7 +14,6 @@ struct shopView: View {
             
             ShopView()
         }
-            
     }
 }
 
@@ -25,12 +24,10 @@ struct shopView_Previews: PreviewProvider {
 }
 
 struct ShopView: View {
-  
+    
     
     var body: some View {
         
         Text("amr")
-        
-        
     }
 }

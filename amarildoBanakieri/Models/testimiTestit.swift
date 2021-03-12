@@ -1,10 +1,4 @@
 
-//
-//.onAppear(perform: {
-//   networkManager.searchData(userText: text)        })
-//
-//
-//orEach(networkManager.userSearch, id: \.self)
 import SwiftUI
 
 struct TestView: View {
@@ -19,13 +13,9 @@ struct TestView: View {
             }
         }
     }
-        
- 
-
 
 struct contentView_Previews: PreviewProvider {
     static var previews: some View {
         TestView()
     }
-
 }

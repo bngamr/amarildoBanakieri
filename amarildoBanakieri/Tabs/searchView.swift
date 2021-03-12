@@ -43,8 +43,8 @@ struct SearchView: View {
     @State private var isEditing = false
     
     @Environment(\.viewController) private var viewControllerHolder:
-    ViewControllerHolder
-
+        ViewControllerHolder
+    
     private var viewController: UIViewController? {
         self.viewControllerHolder.value
     }
@@ -68,10 +68,10 @@ struct SearchView: View {
                         Button {
                             self.viewController?.present(style: .formSheet) {
                                 extraView(extraPost: post)
-                                        }
+                            }
                         }
-                            label:{
-                      
+                        label:{
+                            
                             VStack(alignment: .center) {
                                 KFImage(URL(string: post.strDrinkThumb))
                                     .resizable()
@@ -84,7 +84,7 @@ struct SearchView: View {
                                     .foregroundColor(.white)
                             }.frame(width: UIScreen.main.bounds.width / 2.3 , height: UIScreen.main.bounds.height / 3)
                             
-                            }
+                        }
                         
                         
                         
@@ -150,7 +150,6 @@ struct SearchBar: UIViewRepresentable {
         }
     }
 }
-
 
 /// Hiding Navigation Bar:
 

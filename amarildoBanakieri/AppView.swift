@@ -38,19 +38,10 @@ struct AppView: View {
                 .tabItem {
                     Image(systemName: "bag")
                     Text("shop")
-                      
-                    
                 }
-               
-            
-            
         }
         .accentColor(.orange)
-      
     }
-    
-    
-    
 
 struct AppView_Previews: PreviewProvider {
     static let order = shopView()
@@ -59,7 +50,4 @@ struct AppView_Previews: PreviewProvider {
     
     }
 }
-
-
- 
 }
