@@ -62,7 +62,7 @@ struct SearchView: View {
                     
                 ]
                 , spacing: UIScreen.main.bounds.height / 20, content: {
-                    ForEach(networkManager.userSearch, id: \.self) { post in
+                    ForEach(networkManager.posts, id: \.self) { post in
                         
                         
                         Button {

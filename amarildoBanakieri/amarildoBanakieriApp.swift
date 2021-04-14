@@ -12,7 +12,6 @@ import SwiftUI
 struct amarildoBanakieriApp: App {
     var body: some Scene {
         WindowGroup {
-        
             AppView()
         }
     }

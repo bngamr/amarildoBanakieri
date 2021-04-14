@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2F589C7D25EBB85500E4A4B0 /* testimiTestit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F589C7C25EBB85500E4A4B0 /* testimiTestit.swift */; };
+		2FD7C57826054AF500634FF4 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 2FD7C57726054AF500634FF4 /* Realm */; };
+		2FD7C57A26054AF500634FF4 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2FD7C57926054AF500634FF4 /* RealmSwift */; };
 		2FFD931F25F2C913001619E2 /* extraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFD931E25F2C913001619E2 /* extraView.swift */; };
 		927BA01E25D53A4300787649 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 927BA01D25D53A4300787649 /* Kingfisher */; };
 		CE452F7A25A4C97700124BD2 /* amarildoBanakieriApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE452F7925A4C97700124BD2 /* amarildoBanakieriApp.swift */; };
@@ -16,11 +18,9 @@
 		CE452FB525A4DAEA00124BD2 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE452FB425A4DAEA00124BD2 /* AppView.swift */; };
 		CE452FB825A4DBB900124BD2 /* shopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE452FB725A4DBB900124BD2 /* shopView.swift */; };
 		CE452FBC25A4DBE400124BD2 /* discoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE452FBB25A4DBE400124BD2 /* discoverView.swift */; };
-		CE452FC025A4DBEF00124BD2 /* createView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE452FBF25A4DBEF00124BD2 /* createView.swift */; };
 		CE452FC325A4DC1600124BD2 /* searchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE452FC225A4DC1600124BD2 /* searchView.swift */; };
 		CE55821625ACC5C2008F8D9C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55821525ACC5C2008F8D9C /* NetworkManager.swift */; };
 		CE55821A25ACC827008F8D9C /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55821925ACC827008F8D9C /* PostData.swift */; };
-		CEB9641B25D707D1006D892D /* iPages in Frameworks */ = {isa = PBXBuildFile; productRef = CEB9641A25D707D1006D892D /* iPages */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,6 @@
 		CE452FB425A4DAEA00124BD2 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		CE452FB725A4DBB900124BD2 /* shopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shopView.swift; sourceTree = "<group>"; };
 		CE452FBB25A4DBE400124BD2 /* discoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = discoverView.swift; sourceTree = "<group>"; };
-		CE452FBF25A4DBEF00124BD2 /* createView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createView.swift; sourceTree = "<group>"; };
 		CE452FC225A4DC1600124BD2 /* searchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchView.swift; sourceTree = "<group>"; };
 		CE55821525ACC5C2008F8D9C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CE55821925ACC827008F8D9C /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
@@ -45,8 +44,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FD7C57A26054AF500634FF4 /* RealmSwift in Frameworks */,
+				2FD7C57826054AF500634FF4 /* Realm in Frameworks */,
 				927BA01E25D53A4300787649 /* Kingfisher in Frameworks */,
-				CEB9641B25D707D1006D892D /* iPages in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +96,6 @@
 			children = (
 				CE452FBB25A4DBE400124BD2 /* discoverView.swift */,
 				CE452FB725A4DBB900124BD2 /* shopView.swift */,
-				CE452FBF25A4DBEF00124BD2 /* createView.swift */,
 				CE452FC225A4DC1600124BD2 /* searchView.swift */,
 				2FFD931E25F2C913001619E2 /* extraView.swift */,
 			);
@@ -131,7 +130,8 @@
 			name = amarildoBanakieri;
 			packageProductDependencies = (
 				927BA01D25D53A4300787649 /* Kingfisher */,
-				CEB9641A25D707D1006D892D /* iPages */,
+				2FD7C57726054AF500634FF4 /* Realm */,
+				2FD7C57926054AF500634FF4 /* RealmSwift */,
 			);
 			productName = amarildoBanakieri;
 			productReference = CE452F7625A4C97700124BD2 /* amarildoBanakieri.app */;
@@ -163,7 +163,7 @@
 			packageReferences = (
 				CE55821125ACBD48008F8D9C /* XCRemoteSwiftPackageReference "Alamofire" */,
 				927BA01C25D53A4300787649 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				CEB9641925D707D1006D892D /* XCRemoteSwiftPackageReference "iPages" */,
+				2FD7C57626054AF500634FF4 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = CE452F7725A4C97700124BD2 /* Products */;
 			projectDirPath = "";
@@ -195,7 +195,6 @@
 				CE55821A25ACC827008F8D9C /* PostData.swift in Sources */,
 				CE452F7A25A4C97700124BD2 /* amarildoBanakieriApp.swift in Sources */,
 				CE55821625ACC5C2008F8D9C /* NetworkManager.swift in Sources */,
-				CE452FC025A4DBEF00124BD2 /* createView.swift in Sources */,
 				2FFD931F25F2C913001619E2 /* extraView.swift in Sources */,
 				CE452FBC25A4DBE400124BD2 /* discoverView.swift in Sources */,
 				CE452FB825A4DBB900124BD2 /* shopView.swift in Sources */,
@@ -330,6 +329,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"amarildoBanakieri/Preview Content\"";
+				DEVELOPMENT_TEAM = 7LA653FU7X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = amarildoBanakieri/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -337,7 +337,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = amr.amarildoBanakieri;
+				PRODUCT_BUNDLE_IDENTIFIER = amr.amarildoBengasiBanakieri;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -351,6 +351,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"amarildoBanakieri/Preview Content\"";
+				DEVELOPMENT_TEAM = 7LA653FU7X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = amarildoBanakieri/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -358,7 +359,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = amr.amarildoBanakieri;
+				PRODUCT_BUNDLE_IDENTIFIER = amr.amarildoBengasiBanakieri;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -389,6 +390,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2FD7C57626054AF500634FF4 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.7.2;
+			};
+		};
 		927BA01C25D53A4300787649 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -405,26 +414,23 @@
 				minimumVersion = 5.4.1;
 			};
 		};
-		CEB9641925D707D1006D892D /* XCRemoteSwiftPackageReference "iPages" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/benjaminsage/iPages.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.12;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2FD7C57726054AF500634FF4 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FD7C57626054AF500634FF4 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		2FD7C57926054AF500634FF4 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FD7C57626054AF500634FF4 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
 		927BA01D25D53A4300787649 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 927BA01C25D53A4300787649 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
-		};
-		CEB9641A25D707D1006D892D /* iPages */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CEB9641925D707D1006D892D /* XCRemoteSwiftPackageReference "iPages" */;
-			productName = iPages;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

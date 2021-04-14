@@ -15,8 +15,6 @@ struct ContentView_Previews: PreviewProvider {
 
 struct DetailView: View {
     var body: some View {
-        
-        
         ZStack {
             Color(.black).edgesIgnoringSafeArea(.all)
             ProductView()
@@ -25,7 +23,7 @@ struct DetailView: View {
 }
 
 struct PostPosht: View {
-    var postPosht: DrinkPosht
+    var postPosht: Drink
     var body: some View {
         
         ZStack {
@@ -102,9 +100,7 @@ struct ProductView: View {
                                     
                                 }
                                 
-                                .onAppear(perform: {
-                                    networkManager.fetchData()
-                                })
+                              
                                 .frame(width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.height / 2.3,
                                        alignment: .bottom)
                             }
@@ -131,9 +127,12 @@ struct ProductView: View {
                                     })
                             )
                         }
-                    }
-                }.edgesIgnoringSafeArea(.all)
-                .onAppear(perform: networkManager.fetchData)
+                    }.onAppear(perform: {
+                        networkManager.fetchData()
+                    })
+                }
+                .edgesIgnoringSafeArea(.all)
+               
                 
                 HStack {
                     ForEach(0..<networkManager.posts.count, id: \.self) { index in
@@ -148,7 +147,10 @@ struct ProductView: View {
                                     .stroke(Color.white, lineWidth: 2))
                         
                     }
-                }.frame(height: UIScreen.main.bounds.height / 4, alignment: .center)
+                }.onAppear(perform: {
+                    networkManager.fetchDataPosht()
+                })
+                .frame(height: UIScreen.main.bounds.height / 4, alignment: .center)
                 
                 HStack {
                     Text("Today Recepies")
@@ -165,13 +167,15 @@ struct ProductView: View {
                     .scaledToFill()
                     .font(.footnote)
                     
-                } .onAppear(perform: networkManager.fetchData)
+                } .onAppear(perform: {
+                    networkManager.fetchDataPosht()
+                })
                 .frame(width: UIScreen.main.bounds.width / 1.1, height: UIScreen.main.bounds.height / 20)
                 
                 ScrollView (.horizontal){
                     HStack (spacing: 15){
                         
-                        ForEach(networkManager.postsPosht) { postPosht in
+                        ForEach(networkManager.posts) { postPosht in
                             
                             // fotot dhe emrat e koktejlve
                             Button {
@@ -186,7 +190,7 @@ struct ProductView: View {
                             }
                         }
                     }
-                }.onAppear(perform: networkManager.fetchDataPosht)
+                }
                 .edgesIgnoringSafeArea(.all)
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/3)
             }.frame(height: UIScreen.main.bounds.height)

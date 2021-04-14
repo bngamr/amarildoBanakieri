@@ -27,12 +27,7 @@ struct AppView: View {
                     Image(systemName: "magnifyingglass")
                     Text("Search")
                 }
-            createView()
-                .tabItem {
-                    Image(systemName: "plus.circle")
-                    Text("Create")
-                        
-                }
+          
             
             shopView()
                 .tabItem {

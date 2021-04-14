@@ -10,8 +10,8 @@ import Foundation
 class NetworkManager: ObservableObject {
     
     @Published var posts = [Drink]()
-    @Published var postsPosht = [DrinkPosht]()
-    @Published var userSearch = [UserSearch]()
+    @Published var postsPosht = [Drink]()
+    @Published var extraPost = [Drink]()
 
     func fetchData() {
         let urlString: String = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
@@ -46,10 +46,10 @@ class NetworkManager: ObservableObject {
                     let decoder = JSONDecoder()
                     if let safeData = data {
                         do {
-                            let resultsPosht = try decoder.decode(ResultsPosht.self, from: safeData)
+                            let results = try decoder.decode(ResultsPosht.self, from: safeData)
                             DispatchQueue.main.async {
-                                self.postsPosht = resultsPosht.drinks
-                                print(resultsPosht)
+                                self.postsPosht = results.drinks
+                                print(results)
                             }
                         } catch {
                             print(error)
@@ -71,11 +71,11 @@ class NetworkManager: ObservableObject {
                 let decoder = JSONDecoder()
                 if let safeData = data {
                     do {
-                        let userResults = try decoder.decode(ResultsFromUser.self, from: safeData)
+                        let results = try decoder.decode(Results.self, from: safeData)
                         DispatchQueue.main.async {
-                            self.userSearch = userResults.drinks
+                            self.extraPost = results.drinks
                             print("----------------------------------------------------------------------------------------------")
-                            print(userResults)
+                            print(results)
                         }
                     } catch {
                         print(error)
