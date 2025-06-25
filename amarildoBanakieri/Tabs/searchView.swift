@@ -93,11 +93,14 @@ struct SearchView: View {
                 
                 
                 
-            }.onAppear(perform: {
-                        networkManager.searchData(userText: text)        })
-            .onChange(of: text) { (text) in
-                networkManager.searchData(userText: text)
-            }.background(Color.black)
+            }
+            .onAppear {
+                Task { await networkManager.searchData(userText: text) }
+            }
+            .onChange(of: text) { text in
+                Task { await networkManager.searchData(userText: text) }
+            }
+            .background(Color.black)
             
             .hiddenNavigationBarStyle()
             
