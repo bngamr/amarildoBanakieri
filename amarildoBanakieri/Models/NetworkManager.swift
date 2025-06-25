@@ -1,90 +1,46 @@
-//
-//  File.swift
-//  amarildoBanakieri
-//
-//  Created by User on 11.1.21.
-//
-
 import Foundation
 
+@MainActor
 class NetworkManager: ObservableObject {
-    
-    @Published var posts = [Drink]()
-    @Published var postsPosht = [Drink]()
-    @Published var extraPost = [Drink]()
+    @Published var posts: [Drink] = []
+    @Published var postsPosht: [Drink] = []
+    @Published var extraPost: [Drink] = []
 
-    func fetchData() {
-        let urlString: String = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
-        if let url = URL(string: urlString) {
-            let session = URLSession(configuration: .default)
-            let task = session.dataTask(with: url) { (data, response, error) in
-                if error == nil {
-                    let decoder = JSONDecoder()
-                    if let safeData = data {
-                        do {
-                            let results = try decoder.decode(Results.self, from: safeData)
-                            DispatchQueue.main.async {
-                                self.posts = results.drinks
-                                print(results)
-                            }
-                        } catch {
-                            print(error)
-                        }
-                    }
-                }
-            }
-            task.resume()
-        }
-    }
-    
-    func fetchDataPosht() {
-        let urlString: String = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a"
-        if let url = URL(string: urlString) {
-            let session = URLSession(configuration: .default)
-            let task = session.dataTask(with: url) { (data, response, error) in
-                if error == nil {
-                    let decoder = JSONDecoder()
-                    if let safeData = data {
-                        do {
-                            let results = try decoder.decode(ResultsPosht.self, from: safeData)
-                            DispatchQueue.main.async {
-                                self.postsPosht = results.drinks
-                                print(results)
-                            }
-                        } catch {
-                            print(error)
-                        }
-                    }
-                }
-            }
-            task.resume()
+    func fetchData() async {
+        let urlString = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
+        guard let url = URL(string: urlString) else { return }
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let results = try JSONDecoder().decode(Results.self, from: data)
+            posts = results.drinks
+        } catch {
+            print(error)
         }
     }
 
-    func searchData(userText: String) {
-            
-            let urlString: String = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=\(userText)"
-            if let url = URL(string: urlString) {
-                let session = URLSession(configuration: .default)
-                let task = session.dataTask(with: url) { (data, response, error) in
-            if error == nil {
-                let decoder = JSONDecoder()
-                if let safeData = data {
-                    do {
-                        let results = try decoder.decode(Results.self, from: safeData)
-                        DispatchQueue.main.async {
-                            self.extraPost = results.drinks
-                            print("----------------------------------------------------------------------------------------------")
-                            print(results)
-                        }
-                    } catch {
-                        print(error)
-                    }
-                }
-            }
+    func fetchDataPosht() async {
+        let urlString = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a"
+        guard let url = URL(string: urlString) else { return }
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let results = try JSONDecoder().decode(ResultsPosht.self, from: data)
+            postsPosht = results.drinks
+        } catch {
+            print(error)
         }
-        task.resume()
+    }
+
+    func searchData(userText: String) async {
+        let urlString = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=\(userText)"
+        guard let url = URL(string: urlString) else { return }
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let results = try JSONDecoder().decode(Results.self, from: data)
+            extraPost = results.drinks
+            print("----------------------------------------------")
+            print(results)
+        } catch {
+            print(error)
+        }
     }
 }
-}
-

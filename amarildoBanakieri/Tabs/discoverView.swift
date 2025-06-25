@@ -127,9 +127,10 @@ struct ProductView: View {
                                     })
                             )
                         }
-                    }.onAppear(perform: {
-                        networkManager.fetchData()
-                    })
+                    }
+                    .onAppear {
+                        Task { await networkManager.fetchData() }
+                    }
                 }
                 .edgesIgnoringSafeArea(.all)
                
@@ -147,9 +148,10 @@ struct ProductView: View {
                                     .stroke(Color.white, lineWidth: 2))
                         
                     }
-                }.onAppear(perform: {
-                    networkManager.fetchDataPosht()
-                })
+                }
+                .onAppear {
+                    Task { await networkManager.fetchDataPosht() }
+                }
                 .frame(height: UIScreen.main.bounds.height / 4, alignment: .center)
                 
                 HStack {
@@ -167,9 +169,10 @@ struct ProductView: View {
                     .scaledToFill()
                     .font(.footnote)
                     
-                } .onAppear(perform: {
-                    networkManager.fetchDataPosht()
-                })
+                }
+                .onAppear {
+                    Task { await networkManager.fetchDataPosht() }
+                }
                 .frame(width: UIScreen.main.bounds.width / 1.1, height: UIScreen.main.bounds.height / 20)
                 
                 ScrollView (.horizontal){
