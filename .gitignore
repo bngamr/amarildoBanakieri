@@ -1,0 +1,4 @@
+AndroidApp/gradle/wrapper/gradle-wrapper.jar
+
+# Ignore gradle wrapper jar
+**/gradle-wrapper.jar
